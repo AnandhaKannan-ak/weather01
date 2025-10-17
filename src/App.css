@@ -136,3 +136,183 @@ input:checked + .slider::before {
   padding: 10px;
   width: 80px;
 }
+.header {
+  padding: 5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #a2c0df;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.search-container {
+  position: relative;
+  width: 30%;
+}
+
+.input {
+  width: 170%;
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+
+.para {
+  position: relative;
+  color: black;
+  font-weight: 500;
+  left: 5%;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  right: 5%;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 3px;
+  bottom: 3px;
+  background: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #3c86d3;
+}
+
+input:checked + .slider::before {
+  transform: translateX(20px);
+}
+
+.cities {
+  display: flex;
+  gap: 10px;
+  margin-top: -12px;
+  position: absolute;
+  left: 37.65%;
+  z-index: 5;
+}
+
+.newyork-btn,
+.london-btn,
+.tokyo-btn {
+  width: 107px;
+  background: #a2c0df;
+  border: none;
+  padding: 6px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #00000078;
+}
+
+.drop {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 25%;
+  margin-top: 5px;
+  list-style: none;
+  padding: 0;
+  max-height: 150px;
+  overflow: auto;
+  z-index: 10;
+}
+
+.item {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.container {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+  padding: 20px;
+  margin: 10px auto;
+  width: 300px;
+}
+
+.details {
+  margin-top: 10px;
+}
+
+.forecastcontainer {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cards {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 10px;
+  width: 80px;
+}
+
+/* 🔹 MEDIA QUERY FOR MOBILE (≤480px) */
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    position: relative;
+  }
+
+  .input {
+    width: 100%;
+  }
+
+  .switch {
+    position: absolute;
+    left: 70%;
+    top: 10.5%;
+  }
+
+  .drop {
+    width: 48%;
+  }
+
+  .cities,
+  .para {
+    display: none;
+  }
+}
